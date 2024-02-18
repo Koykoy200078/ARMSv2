@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\src\controller\AdminController;
 use App\Http\Controllers\src\controller\ProfessorController;
 use App\Http\Controllers\src\controller\ResearcherController;
+use App\Http\Controllers\src\ResearchProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +44,13 @@ Route::middleware(['auth', 'verified', 'role:researcher'])->group(function () {
     Route::get('/dashboard', [ResearcherController::class, 'researcherIndex'])->name('researcher.dashboard');
     Route::get('/profile', [ResearcherController::class, 'researcherProfile'])->name('researcher.profile');
     Route::get('/logout', [ResearcherController::class, 'researcherLogout'])->name('researcher.logout');
+
+    // src
+    Route::resource('projects', ResearchProjectController::class);
+    Route::get('/projects', [ResearchProjectController::class, 'index'])->name('projects.index');
+    Route::post('/projects', [ResearchProjectController::class, 'store'])->name('projects.store');
 });
+
+
 
 require __DIR__ . '/auth.php';

@@ -12,7 +12,7 @@
                     </ul> -->
                 </li>
                 <li>
-                    <a href="activities.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-14.svg" alt=""></span> <span>Activities</span></a>
+                    <a href="{{ route('projects.index') }}"><span class="menu-side"><img src="assets/img/icons/menu-icon-14.svg" alt=""></span> <span>Research Project</span></a>
                 </li>
                 <li class="submenu">
                     <a href="#"><i class="fa fa-flag"></i> <span> Reports </span> <span class="menu-arrow"></span></a>

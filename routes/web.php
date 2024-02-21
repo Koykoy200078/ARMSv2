@@ -49,6 +49,8 @@ Route::middleware(['auth', 'verified', 'role:researcher'])->group(function () {
     Route::resource('projects', ResearchProjectController::class);
     Route::get('/projects', [ResearchProjectController::class, 'index'])->name('projects.index');
     Route::post('/projects', [ResearchProjectController::class, 'store'])->name('projects.store');
+    Route::post('/projects/{project}/add-collaborators', [ResearchProjectController::class, 'addCollaborators'])->name('projects.addCollaborators');
+    Route::get('/projects/{project}/removeCollaborator/{collaborator}', [ResearchProjectController::class, 'removeCollaborator'])->name('projects.removeCollaborator');
 });
 
 

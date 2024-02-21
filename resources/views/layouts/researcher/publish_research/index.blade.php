@@ -1,5 +1,5 @@
 @extends('index')
-@section('title', 'Research Project')
+@section('title', 'Publish Research')
 
 <div class="main-wrapper">
     @include('layouts.researcher.body.header')

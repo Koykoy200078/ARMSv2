@@ -32,5 +32,24 @@ class DatabaseSeeder extends Seeder
         $user->role()->create([
             'role' => 'researcher',
         ]);
+
+
+        $user2 = \App\Models\User::factory()->create([
+            'email' => 'christiancarvs@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+        ]);
+
+        $user2->profile()->create([
+            'fname' => 'Christian Franc2',
+            'mname' => 'Magdasal2',
+            'lname' => 'Carvajal2',
+            'contact_number' => '09755571948',
+            'address' => 'Barangay Malusay, Guihulngan City Negros Oriental',
+        ]);
+
+        $user2->role()->create([
+            'role' => 'researcher',
+        ]);
     }
 }

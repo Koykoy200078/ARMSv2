@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(UserRole::class);
     }
+
+    public function projects()
+    {
+        return $this->belongsToMany(ResearchProject::class, 'project_user');
+    }
 }

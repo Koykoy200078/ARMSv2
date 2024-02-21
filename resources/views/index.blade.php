@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
 
-    <link href="{{ asset('../../../fonts.googleapis.com/icone91f.css?family=Material+Icons') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/icone91f.css') }}" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">

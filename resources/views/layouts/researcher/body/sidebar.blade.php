@@ -15,11 +15,8 @@
                     <a href="{{ route('projects.index') }}"><span class="menu-side"><img src="assets/img/icons/menu-icon-14.svg" alt=""></span> <span>Research Project</span></a>
                 </li>
                 <li class="submenu">
-                    <a href="#"><i class="fa fa-flag"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
-                    <ul style="display: none;">
-                        <li><a href="expense-reports.html"> Expense Report </a></li>
-                        <li><a href="invoice-reports.html"> Invoice Report </a></li>
-                    </ul>
+                    <a href="#"><i class="fa fa-flag"></i> <span>Publish Research</span></a>
+
                 </li>
                 <li class="submenu">
                     <a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-15.svg" alt=""></span> <span> Invoice </span> <span class="menu-arrow"></span></a>

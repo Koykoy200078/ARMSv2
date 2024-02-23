@@ -17,7 +17,7 @@
         <li class="nav-item dropdown has-arrow user-profile-list">
             <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
                 <div class="user-names">
-                    <h5>{{ Auth::user()->profile->fname }}</h5>
+                    <h5>{{ Auth::user()->profile->fname ?? Auth::user()->email }}</h5>
                     <span>{{ Auth::user()->role->role }}</span>
                 </div>
                 <span class="user-img">

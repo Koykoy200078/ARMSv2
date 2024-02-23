@@ -29,8 +29,11 @@
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datetimepicker.min.css') }}">
 
-
+    <!-- Summernote CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs5.min.css') }}">
 </head>
 
 <body>
@@ -68,6 +71,14 @@
 
     <!-- Custom JS -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
+
+    <!-- Datepicker Core JS -->
+    <script src="{{ asset('assets/plugins/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+    <!-- Summernote JS -->
+    <script src="{{ asset('assets/plugins/summernote/summernote-bs5.min.js') }}"></script>
+
 </body>
 
 </html>

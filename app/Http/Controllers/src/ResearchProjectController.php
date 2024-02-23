@@ -59,36 +59,11 @@ class ResearchProjectController extends Controller
         return redirect()->route('projects.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function update(Request $request, ResearchProject $project)
     {
-        //
-    }
+        $project->update($request->all());
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('projects.index');
     }
 
     public function addCollaborators(ResearchProject $project, Request $request)

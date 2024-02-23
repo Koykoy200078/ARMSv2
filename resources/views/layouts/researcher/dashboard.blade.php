@@ -1,6 +1,6 @@
 @extends('index')
 @section('title', 'Dashboard')
-
+@section('content')
 <div class="main-wrapper">
     @include('layouts.researcher.body.header')
     @include('layouts.researcher.body.sidebar')
@@ -23,8 +23,10 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="morning-user">
-                            <h2>Good Morning, <span>{{ Auth::user()->fname }}</span></h2>
-                            <p>Have a nice day at work</p>
+                            @php
+                            $hour = \Carbon\Carbon::now()->hour;
+                            if ($hour >= 5 && $hour <= 11) { $greeting="Good Morning" ; } elseif ($hour>= 12 && $hour <= 17) { $greeting="Good Afternoon" ; } else { $greeting="Good Evening" ; } @endphp <h2>{{ $greeting }}, <span>{{ Auth::user()->fname }}</span></h2>
+                                    <p>Have a nice day at work</p>
                         </div>
                     </div>
                     <div class="col-md-6 position-blk">
@@ -40,3 +42,4 @@
 
     <div class="sidebar-overlay" data-reff=""></div>
 </div>
+@endsection

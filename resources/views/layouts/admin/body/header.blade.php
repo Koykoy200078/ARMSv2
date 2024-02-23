@@ -25,8 +25,7 @@
                 </span>
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('researcher.profile') }}">My Profile</a>
-                <a class="dropdown-item" href="{{ route('researcher.logout') }}">Logout</a>
+                <a class="dropdown-item" href="{{ route('professor.logout') }}">Logout</a>
             </div>
         </li>
 
@@ -34,8 +33,7 @@
     <div class="dropdown mobile-user-menu float-end">
         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         <div class="dropdown-menu dropdown-menu-end">
-            <a class="dropdown-item" href="{{ route('researcher.profile') }}">My Profile</a>
-            <a class="dropdown-item" href="{{ route('researcher.logout') }}">Logout</a>
+            <a class="dropdown-item" href="{{ route('professor.logout') }}">Logout</a>
         </div>
     </div>
 </div>

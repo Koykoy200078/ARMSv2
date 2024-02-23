@@ -22,7 +22,12 @@ class ResearchProjectController extends Controller
                 $query->where('user_id', $user->id);
             })
             ->get();
-        $users = User::all();
+
+        // Exclude users with the role of 'admin'
+        $users = User::whereDoesntHave('role', function ($query) {
+            $query->where('role', 'admin');
+        })->get();
+
         return view('layouts.researcher.research_project.index', compact('projects', 'users'));
     }
 

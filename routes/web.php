@@ -35,10 +35,12 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'adminIndex'])->name('admin.dashboard');
+    Route::get('/admin/logout', [AdminController::class, 'adminLogout'])->name('admin.logout');
 });
 
 Route::middleware(['auth', 'role:professor'])->group(function () {
     Route::get('/professor/dashboard', [ProfessorController::class, 'professorIndex'])->name('professor.dashboard');
+    Route::get('/professor/logout', [ProfessorController::class, 'professorLogout'])->name('professor.logout');
 });
 
 Route::middleware(['auth', 'role:researcher'])->group(function () {

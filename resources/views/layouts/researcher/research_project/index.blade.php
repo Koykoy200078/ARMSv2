@@ -55,8 +55,10 @@
                                             <td>{{ $project->funding_details }}</td>
                                             <td>
                                                 @foreach ($project->collaborators as $collaborator)
+                                                @if ($collaborator->role->name == 'admin')
+                                                @continue
+                                                @endif
                                                 <p style="text-align: center;">
-                                                    <!-- {{ $collaborator->profile->fname }} {{ $collaborator->profile->lname }} -->
                                                     {{ optional($collaborator->profile)->fname ?? 'N/A' }} {{ optional($collaborator->profile)->lname ?? 'N/A' }}
                                                     @if (auth()->id() === $project->user_id)
                                                     <a href="{{ route('projects.removeCollaborator', ['project' => $project, 'collaborator' => $collaborator]) }}" onclick="return confirm('Are you sure you want to remove this collaborator?')" style="color: red; font-size: 16px; margin-left: 10px; font-weight: bold;">x</a>

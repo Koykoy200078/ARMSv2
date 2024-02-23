@@ -65,23 +65,24 @@
                                                 @endforeach
                                             </td>
                                             <td style="width: 10%;">
-                                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#view{{ $project->id }}">
+                                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#view-{{ $project->id }}">
                                                     View
                                                 </button>
 
-                                                <button type="button" class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#edit{{ $project->id }}">
+                                                <button type="button" class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#edit-{{ $project->id }}">
                                                     Edit
                                                 </button>
 
-                                                <button type="button" class="btn btn-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#addCollaborators{{ $project->id }}">
+                                                <button type="button" class="btn btn-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#addCollaborators-{{ $project->id }}">
                                                     Add Collaborators
                                                 </button>
+
                                             </td>
                                         </tr>
 
 
                                         <!-- View Project Modal -->
-                                        <div class="modal fade" id="view{{ $project->id ?? '' }}" tabindex="-1" aria-labelledby="viewLabel" aria-hidden="true">
+                                        <div class="modal fade" id="view-{{ $project->id ?? '' }}" aria-labelledby="viewLabel-{{ $project->id }}">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -110,7 +111,7 @@
                                         </div>
 
                                         <!-- Edit Project Modal -->
-                                        <div class="modal fade" id="edit{{ $project->id }}" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+                                        <div class="modal fade" id="edit-{{ $project->id }}" aria-labelledby="editLabel-{{ $project->id }}">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -148,7 +149,7 @@
                                         </div>
 
                                         <!-- Add Collaborators Modal -->
-                                        <div class="modal fade" id="addCollaborators{{ $project->id }}" tabindex="-1" aria-labelledby="addCollaboratorsLabel{{ $project->id }}" aria-hidden="true">
+                                        <div class="modal fade" id="addCollaborators-{{ $project->id }}" aria-labelledby="addCollaboratorsLabel-{{ $project->id }}">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">

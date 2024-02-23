@@ -55,9 +55,6 @@
                                                     View Publish Research
                                                 </button>
 
-                                                <button type="button" class="btn btn-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#view{{ $research->id }}">
-                                                    Show
-                                                </button>
                                             </td>
                                         </tr>
 

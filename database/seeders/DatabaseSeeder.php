@@ -22,11 +22,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $user->profile()->create([
-            'fname' => 'Christian Franc',
-            'mname' => 'Magdasal',
-            'lname' => 'Carvajal',
+            'fname' => 'Researcher',
+            'mname' => '',
+            'lname' => '',
             'contact_number' => '09755571948',
-            'address' => 'Barangay Malusay, Guihulngan City Negros Oriental',
+            'address' => 'Negros Oriental',
         ]);
 
         $user->role()->create([
@@ -41,11 +41,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $user2->profile()->create([
-            'fname' => 'Christian Franc',
-            'mname' => 'Magdasal',
-            'lname' => 'Carvajal',
+            'fname' => 'Admin',
+            'mname' => '',
+            'lname' => '',
             'contact_number' => '09755571948',
-            'address' => 'Barangay Malusay, Guihulngan City Negros Oriental',
+            'address' => 'Negros Oriental',
         ]);
 
         $user2->role()->create([
@@ -59,15 +59,51 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $user3->profile()->create([
-            'fname' => 'Christian Franc',
-            'mname' => 'Magdasal',
-            'lname' => 'Carvajal',
+            'fname' => 'Professor',
+            'mname' => '',
+            'lname' => '',
             'contact_number' => '09755571948',
-            'address' => 'Barangay Malusay, Guihulngan City Negros Oriental',
+            'address' => 'Negros Oriental',
         ]);
 
         $user3->role()->create([
             'role' => 'professor',
+        ]);
+
+        $user4 = \App\Models\User::factory()->create([
+            'email' => 'testuser1@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+        ]);
+
+        $user4->profile()->create([
+            'fname' => 'Andre',
+            'mname' => '',
+            'lname' => 'Asa',
+            'contact_number' => '09755571948',
+            'address' => 'Negros Oriental',
+        ]);
+
+        $user4->role()->create([
+            'role' => 'researcher',
+        ]);
+
+        $user5 = \App\Models\User::factory()->create([
+            'email' => 'testuser2@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+        ]);
+
+        $user5->profile()->create([
+            'fname' => 'Philip',
+            'mname' => 'Go',
+            'lname' => 'Goba',
+            'contact_number' => '09755571948',
+            'address' => 'Negros Oriental',
+        ]);
+
+        $user5->role()->create([
+            'role' => 'researcher',
         ]);
     }
 }
